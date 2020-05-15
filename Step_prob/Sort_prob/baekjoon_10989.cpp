@@ -3,33 +3,22 @@
 #pragma warning (disable: 4996)
 using namespace std;
 
-int arr[10001];
-int cnt[10001];
-int result[10001];
+int arr[10001] = { 0, };
+int cnt = 0;
 
 int main() {
 	int num = 0;
 	scanf("%d", &num);
 
-	for (int i = 0; i < num; i++)
-		scanf("%d", &arr[i]);
-
-	for (int j = 0; j < num; j++) {
-		cnt[arr[j]]++;
-	}
-	
-	for (int k = 0; k < num; k++) {
-		cnt[k + 1] += cnt[k];
-	}
-
-	for (int k = 0; k < num; k++) {
-		result[cnt[arr[k]]-1] = arr[k];
-		cnt[arr[k]] -= 1;
-	}
 	for (int i = 0; i < num; i++) {
-		printf("%d\n", result[i]);
+		scanf("%d", &cnt);
+		arr[cnt]++;
 	}
+
+	for (int i = 1;i <= 10000;i++) {
+		for (int j = 0; j < arr[i]; j++) {
+			printf("%d\n", i);
+		}
+	}
+	return 0;
 }
-
-
-
