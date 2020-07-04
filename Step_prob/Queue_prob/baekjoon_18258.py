@@ -1,8 +1,8 @@
 import sys
+from collections import deque
 
 num = int(sys.stdin.readline())
-
-q = list()
+q = deque([])
 cnt = 0
 for i in range(num):
     cmd = sys.stdin.readline().split()
@@ -12,7 +12,7 @@ for i in range(num):
         if len(q) == 0:
             print('-1')
         else:
-            print(q[0])
+            print(q.popleft())
 
     elif cmd[0] == 'size':
         print(len(q))
@@ -30,4 +30,4 @@ for i in range(num):
         if len(q) == 0:
             print('-1')
         else:
-            print(q[len(q) - 1])
+            print(q[-1])
