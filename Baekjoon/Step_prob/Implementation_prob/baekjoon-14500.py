@@ -21,8 +21,6 @@ def block_a(a_res):
                 res = maps[i][j] + maps[i + 1][j] + maps[i + 2][j] + maps[i + 3][j]                 # ■
                 a_res.append(res)                                                                   # ■
 
-    for i in range(n):
-        for j in range(m):
             if j + 3 < m:
                 # print(maps[i][j], maps[i][j + 1], maps[i][j + 2], maps[i][j + 3])                 # ■ ■ ■ ■
                 res = maps[i][j] + maps[i][j + 1] + maps[i][j + 2] + maps[i][j + 3]
@@ -51,48 +49,42 @@ def block_c(c_res):
                 # print(maps[i][j], maps[i + 1][j], maps[i + 2][j], maps[i + 2][j + 1])             # ■
                 res = maps[i][j] + maps[i + 1][j] + maps[i + 2][j] + maps[i + 2][j + 1]             # ■
                 c_res.append(res)                                                                   # ■ ■
-    for i in range(n):
-        for j in range(m):
+
             if i + 1 < n and j + 2 < m:
                 # print(maps[i][j], maps[i][j + 1], maps[i][j + 2], maps[i + 1][j])                 # ■ ■ ■
                 res = maps[i][j] + maps[i][j + 1] + maps[i][j + 2] + maps[i + 1][j]                 # ■
                 c_res.append(res)
-    for i in range(n):
-        for j in range(m):
+
             if i + 1 < n and j + 2 < m:
                 # print(maps[i][j], maps[i + 1][j], maps[i + 1][j + 1], maps[i + 1][j + 2])         # ■
                 res = maps[i][j] + maps[i + 1][j] + maps[i + 1][j + 1] + maps[i + 1][j + 2]         # ■ ■ ■
                 c_res.append(res)
-    for i in range(n):
-        for j in range(m):
+
             if i + 2 < n and j + 1 < m:
                 # print(maps[i][j], maps[i][j + 1], maps[i + 1][j + 1], maps[i + 2][j + 1])         # ■ ■
                 res = maps[i][j] + maps[i][j + 1] + maps[i + 1][j + 1] + maps[i + 2][j + 1]         #   ■
                 c_res.append(res)                                                                   #   ■
-    for i in range(n):
-        for j in range(m):
+
             if i + 2 < n and j + 1 < m:
                 # print(maps[i][j + 1], maps[i + 1][j + 1], maps[i + 2][j], maps[i + 2][j + 1])     #   ■
                 res = maps[i][j + 1] + maps[i + 1][j + 1] + maps[i + 2][j] + maps[i + 2][j + 1]     #   ■
                 c_res.append(res)                                                                   # ■ ■
-    for i in range(n):
-        for j in range(m):
+
             if i + 1 < n and j + 2 < m:
                 # print(maps[i][j + 2], maps[i + 1][j], maps[i + 1][j + 1], maps[i + 1][j + 2])     #     ■
                 res = maps[i][j + 2] + maps[i + 1][j] + maps[i + 1][j + 1] + maps[i + 1][j + 2]     # ■ ■ ■
                 c_res.append(res)
-    for i in range(n):
-        for j in range(m):
+
             if i + 1 < n and j + 2 < m:
                 # print(maps[i][j], maps[i][j + 1], maps[i][j + 2], maps[i + 1][j + 2])             # ■ ■ ■
                 res = maps[i][j] + maps[i][j + 1] + maps[i][j + 2] + maps[i + 1][j + 2]             #     ■
                 c_res.append(res)
-    for i in range(n):
-        for j in range(m):
+
             if i + 2 < n and j + 1 < m:
                 # print(maps[i][j], maps[i][j + 1], maps[i + 1][j], maps[i + 2][j])                 # ■ ■
                 res = maps[i][j] + maps[i][j + 1] + maps[i + 1][j] + maps[i + 2][j]                 # ■
                 c_res.append(res)                                                                   # ■
+
     c_res = list(set(c_res))
     return c_res
 
@@ -104,20 +96,17 @@ def block_d(d_res):
                 # print(maps[i][j], maps[i + 1][j], maps[i + 1][j + 1], maps[i + 2][j + 1])         # ■
                 res = maps[i][j] + maps[i + 1][j] + maps[i + 1][j + 1] + maps[i + 2][j + 1]         # ■ ■
                 d_res.append(res)                                                                   #   ■
-    for i in range(n):
-        for j in range(m):
+
             if i + 1 < n and j + 2 < m:
                 # print(maps[i][j + 1], maps[i][j + 2], maps[i + 1][j], maps[i + 1][j + 1])         #   ■ ■
                 res = maps[i][j + 1] + maps[i][j + 2] + maps[i + 1][j] + maps[i + 1][j + 1]         # ■ ■
                 d_res.append(res)
-    for i in range(n):
-        for j in range(m):
+
             if i + 1 < n and j + 2 < m:
                 # print(maps[i][j], maps[i][j + 1], maps[i + 1][j + 1], maps[i + 1][j + 2])         # ■ ■
                 res = maps[i][j] + maps[i][j + 1] + maps[i + 1][j + 1] + maps[i + 1][j + 2]         #   ■ ■
                 d_res.append(res)
-    for i in range(n):
-        for j in range(m):
+
             if i + 2 < n and j + 1 < m:
                 # print(maps[i][j + 1], maps[i + 1][j], maps[i + 1][j + 1], maps[i + 2][j])         #   ■
                 res = maps[i][j + 1] + maps[i + 1][j] + maps[i + 1][j + 1] + maps[i + 2][j]         # ■ ■
@@ -134,20 +123,17 @@ def block_e(e_res):
                 # print(maps[i][j], maps[i][j + 1], maps[i][j + 2], maps[i + 1][j + 1])             # ■ ■ ■
                 res = maps[i][j] + maps[i][j + 1] + maps[i][j + 2] + maps[i + 1][j + 1]             #   ■
                 e_res.append(res)
-    for i in range(n):
-        for j in range(m):
+
             if i + 2 < n and j + 1 < m:
                 # print(maps[i][j], maps[i + 1][j], maps[i + 1][j + 1], maps[i + 2][j])             # ■
                 res = maps[i][j] + maps[i + 1][j] + maps[i + 1][j + 1] + maps[i + 2][j]             # ■ ■
                 e_res.append(res)                                                                   # ■
-    for i in range(n):
-        for j in range(m):
+
             if i + 1 < n and j + 2 < m:
                 # print(maps[i][j + 1], maps[i + 1][j], maps[i + 1][j + 1], maps[i + 1][j + 2])     #   ■
                 res = maps[i][j + 1] + maps[i + 1][j] + maps[i + 1][j + 1] + maps[i + 1][j + 2]     # ■ ■ ■
                 e_res.append(res)
-    for i in range(n):
-        for j in range(m):
+
             if i + 2 < n and j + 1 < m:
                 # print(maps[i][j + 1], maps[i + 1][j], maps[i + 1][j + 1], maps[i + 2][j + 1])     #   ■
                 res = maps[i][j + 1] + maps[i + 1][j] + maps[i + 1][j + 1] + maps[i + 2][j + 1]     # ■ ■
